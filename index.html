@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word counter</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body{
+            font-family: monospace;
+            background-color: rgb(239, 252, 252);
+            font-size: large;
+        }
+
+        center{
+            margin: 100px auto;
+            padding: 30px;
+            width: 85%;
+            border-radius: 15px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+        }
+
+        input{
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 10px 15px;
+        }
+
+        span{
+            color: red;
+        }
+
+        #demo{
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h2>Word Counter</h2>
+        <br>
+        <h6><span>Note: </span>word space is included.</h6>
+        <br>
+        <h2>
+            <h3><p id="lengths"></p></h3>
+            <p style="color: green;" id="length"></p>
+            <br>
+            <form action="">
+                <textarea cols="30" rows="10" id="demo"></textarea>
+                <br><br>
+                <input type="button" value="Show Length" onclick="btn()">
+                <input type="reset" value="Reset">
+            </form>
+            
+        </h2>
+    </center>
+    <script>
+        function btn(){
+            text = document.getElementById('demo').value;
+            
+            document.getElementById('lengths').innerHTML = 'Approximately';
+            document.getElementById('length').innerHTML = text.length;
+        }
+    </script>
+</body>
+</html>
